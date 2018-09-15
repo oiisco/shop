@@ -9,6 +9,7 @@ Bundler.require(*Rails.groups)
 module Shop
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
+    config.i18n.default_locale = :pl
     config.load_defaults 5.1
 
     # Settings in config/environments/* take precedence over those specified here.
