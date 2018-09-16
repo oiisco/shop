@@ -4,12 +4,20 @@
 <span class="fa fa-plus"></span> Dodaj nowy produkt
 <% end %>
 
+<div class="search-from">
+  <%= search_form_for [:admin, @q] do |f| %>
+  <%= f.text_field :name_or_description_or_long_description_cont, placeholder: "Szukaj tekstu" %>
+  <%= f.text_field :price_gt, placeholder: "Cena >" %>              <!-- poprawić wyszukiwanie ceny, szuka w groszach -->
+  <%= f.submit "Szukaj" %>
+  <% end %>
+</div>
+
 <table class="table table-stripped">
   <thead>
     <tr>
-      <th>Nazwa</th>
-      <th>Cena</th>
-      <th>Kategoria</th>
+      <th><%= sort_link(@q, :name, "Nazwa")%></th>
+      <th><%= sort_link(@q, :price, "Cena")%></th>
+      <th><%= sort_link(@q, :category_id, "Kategoria")%></th>
       <th></th>
     </tr>
   </thead>
