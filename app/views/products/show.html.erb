@@ -4,7 +4,7 @@
         <p class="lead"><%= @product.description %></p>
         <%= simple_format (@product.long_description) %>
 
-        <p class="lead"><%= number_to_currency(@product.price/100) %></p>
+        <p class="lead"><%= number_to_currency(@product.price.to_f/100) %></p>
         <p>
           <%= link_to "#", class: "btn btn-primary" do %>
           <span class="fa fa-shopping-cart"></span> Dodaj do koszyka
