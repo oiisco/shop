@@ -264,7 +264,7 @@ DEPENDENCIES
   simple_form
   spring
   spring-watcher-listen (~> 2.0.0)
-  statesman
+  statesman (~> 3.4.1)
   turbolinks (~> 5)
   twitter-bootstrap-rails
   tzinfo-data
